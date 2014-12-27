@@ -1,0 +1,10 @@
+/Users/vitaly/Dropbox/DuplicatesFinder/DuplicatesFinder.Tests/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/Users/vitaly/Dropbox/DuplicatesFinder/DuplicatesFinder.Tests/bin/Debug/DuplicatesFinder.Tests.exe.config
+/Users/vitaly/Dropbox/DuplicatesFinder/DuplicatesFinder.Tests/bin/Debug/DuplicatesFinder.Tests.exe.mdb
+/Users/vitaly/Dropbox/DuplicatesFinder/DuplicatesFinder.Tests/bin/Debug/DuplicatesFinder.Tests.exe
+/Users/vitaly/Dropbox/DuplicatesFinder/DuplicatesFinder.Tests/obj/Debug/DuplicatesFinder.Tests.exe
+/Users/vitaly/Dropbox/DuplicatesFinder/DuplicatesFinder.Tests/obj/Debug/DuplicatesFinder.Tests.exe.mdb
+/Users/vitaly/Dropbox/DuplicatesFinder/DuplicatesFinder.Tests/bin/Debug/xunit.dll
+/Users/vitaly/Dropbox/DuplicatesFinder/DuplicatesFinder.Tests/bin/Debug/xunit.extensions.dll
+/Users/vitaly/Dropbox/DuplicatesFinder/DuplicatesFinder.Tests/bin/Debug/DuplicatesFinder.exe
+/Users/vitaly/Dropbox/DuplicatesFinder/DuplicatesFinder.Tests/bin/Debug/DuplicatesFinder.exe.mdb

@@ -1,0 +1,15 @@
+c:\users\vitaly\documents\visual studio 2013\Projects\DuplicatesFinder\DuplicatesFinder\bin\Debug\DuplicatesFinder.exe.config
+c:\users\vitaly\documents\visual studio 2013\Projects\DuplicatesFinder\DuplicatesFinder\bin\Debug\DuplicatesFinder.exe
+c:\users\vitaly\documents\visual studio 2013\Projects\DuplicatesFinder\DuplicatesFinder\bin\Debug\DuplicatesFinder.pdb
+c:\users\vitaly\documents\visual studio 2013\Projects\DuplicatesFinder\DuplicatesFinder\obj\Debug\DuplicatesFinder.csprojResolveAssemblyReference.cache
+c:\users\vitaly\documents\visual studio 2013\Projects\DuplicatesFinder\DuplicatesFinder\obj\Debug\DuplicatesFinder.exe
+c:\users\vitaly\documents\visual studio 2013\Projects\DuplicatesFinder\DuplicatesFinder\obj\Debug\DuplicatesFinder.pdb
+C:\Users\Vitalyd\Dropbox\DuplicatesFinder\DuplicatesFinder\bin\Debug\DuplicatesFinder.exe.config
+C:\Users\Vitalyd\Dropbox\DuplicatesFinder\DuplicatesFinder\obj\Debug\DuplicatesFinder.exe
+C:\Users\Vitalyd\Dropbox\DuplicatesFinder\DuplicatesFinder\obj\Debug\DuplicatesFinder.pdb
+C:\Users\Vitaly\Dropbox\DuplicatesFinder\DuplicatesFinder\bin\Debug\DuplicatesFinder.exe.config
+C:\Users\Vitaly\Dropbox\DuplicatesFinder\DuplicatesFinder\obj\Debug\DuplicatesFinder.exe
+C:\Users\Vitaly\Dropbox\DuplicatesFinder\DuplicatesFinder\obj\Debug\DuplicatesFinder.pdb
+C:\Users\Vitaly\Dropbox\DuplicatesFinder\DuplicatesFinder\bin\Debug\DuplicatesFinder.exe
+C:\Users\Vitaly\Dropbox\DuplicatesFinder\DuplicatesFinder\bin\Debug\DuplicatesFinder.pdb
+C:\Users\Vitaly\Dropbox\DuplicatesFinder\DuplicatesFinder\obj\Debug\DuplicatesFinder.csprojResolveAssemblyReference.cache

@@ -1,0 +1,16 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="DuplicatesFinder/Program.cs">
+    <Files>
+      <File FileName="DuplicatesFinder/Program.cs" Line="34" Column="34" />
+      <File FileName="DuplicatesFinder/FileSizeInfo.cs" Line="1" Column="1" />
+      <File FileName="DuplicatesFinder/Finder.cs" Line="19" Column="19" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/vitaly/Dropbox/DuplicatesFinder/DuplicatesFinder/Program.cs" line="12" column="42" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

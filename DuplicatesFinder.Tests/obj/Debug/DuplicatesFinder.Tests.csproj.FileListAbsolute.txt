@@ -1,0 +1,22 @@
+C:\Users\Vitaly\documents\visual studio 2013\Projects\DuplicatesFinder\DuplicatesFinder.Tests\bin\Debug\DuplicatesFinder.Tests.exe.config
+C:\Users\Vitaly\documents\visual studio 2013\Projects\DuplicatesFinder\DuplicatesFinder.Tests\bin\Debug\DuplicatesFinder.Tests.exe
+C:\Users\Vitaly\documents\visual studio 2013\Projects\DuplicatesFinder\DuplicatesFinder.Tests\bin\Debug\DuplicatesFinder.Tests.pdb
+C:\Users\Vitaly\documents\visual studio 2013\Projects\DuplicatesFinder\DuplicatesFinder.Tests\bin\Debug\DuplicatesFinder.exe
+C:\Users\Vitaly\documents\visual studio 2013\Projects\DuplicatesFinder\DuplicatesFinder.Tests\bin\Debug\xunit.dll
+C:\Users\Vitaly\documents\visual studio 2013\Projects\DuplicatesFinder\DuplicatesFinder.Tests\bin\Debug\xunit.extensions.dll
+C:\Users\Vitaly\documents\visual studio 2013\Projects\DuplicatesFinder\DuplicatesFinder.Tests\bin\Debug\DuplicatesFinder.pdb
+C:\Users\Vitaly\documents\visual studio 2013\Projects\DuplicatesFinder\DuplicatesFinder.Tests\bin\Debug\xunit.xml
+C:\Users\Vitaly\documents\visual studio 2013\Projects\DuplicatesFinder\DuplicatesFinder.Tests\bin\Debug\xunit.extensions.xml
+C:\Users\Vitaly\documents\visual studio 2013\Projects\DuplicatesFinder\DuplicatesFinder.Tests\obj\Debug\DuplicatesFinder.Tests.csprojResolveAssemblyReference.cache
+C:\Users\Vitaly\documents\visual studio 2013\Projects\DuplicatesFinder\DuplicatesFinder.Tests\obj\Debug\DuplicatesFinder.Tests.exe
+C:\Users\Vitaly\documents\visual studio 2013\Projects\DuplicatesFinder\DuplicatesFinder.Tests\obj\Debug\DuplicatesFinder.Tests.pdb
+C:\Users\Vitaly\Dropbox\DuplicatesFinder\DuplicatesFinder.Tests\bin\Debug\DuplicatesFinder.Tests.exe.config
+C:\Users\Vitaly\Dropbox\DuplicatesFinder\DuplicatesFinder.Tests\bin\Debug\DuplicatesFinder.Tests.exe
+C:\Users\Vitaly\Dropbox\DuplicatesFinder\DuplicatesFinder.Tests\bin\Debug\DuplicatesFinder.Tests.pdb
+C:\Users\Vitaly\Dropbox\DuplicatesFinder\DuplicatesFinder.Tests\bin\Debug\DuplicatesFinder.exe
+C:\Users\Vitaly\Dropbox\DuplicatesFinder\DuplicatesFinder.Tests\bin\Debug\DuplicatesFinder.pdb
+C:\Users\Vitaly\Dropbox\DuplicatesFinder\DuplicatesFinder.Tests\bin\Debug\xunit.xml
+C:\Users\Vitaly\Dropbox\DuplicatesFinder\DuplicatesFinder.Tests\bin\Debug\xunit.extensions.xml
+C:\Users\Vitaly\Dropbox\DuplicatesFinder\DuplicatesFinder.Tests\obj\Debug\DuplicatesFinder.Tests.csprojResolveAssemblyReference.cache
+C:\Users\Vitaly\Dropbox\DuplicatesFinder\DuplicatesFinder.Tests\obj\Debug\DuplicatesFinder.Tests.exe
+C:\Users\Vitaly\Dropbox\DuplicatesFinder\DuplicatesFinder.Tests\obj\Debug\DuplicatesFinder.Tests.pdb
