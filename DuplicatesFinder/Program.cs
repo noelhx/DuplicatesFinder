@@ -13,7 +13,7 @@ namespace DuplicatesFinder
             const string dPath = @"D:\Фотографии";
             const string ePath = @"E:\Фотографии";
 
-            var paths = new[] { dPath, ePath };
+//            var paths = new[] { dPath, ePath };
             var outputs = new[] { @"D:\dPhotos.txt", @"D:\ePhotos.txt" };
 
             foreach (var output in outputs)
@@ -21,7 +21,7 @@ namespace DuplicatesFinder
                 var infos = Deserialize(output);
             }
 
-            return;
+//            return;
 
             /*for (int i = 0; i < paths.Length; i++)
             {
