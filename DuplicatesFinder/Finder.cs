@@ -28,9 +28,15 @@ namespace DuplicatesFinder
                     _comparer = new SizeComparer();
                     break;
 
+                case ComparerType.Fast:
+                    _comparer = new FastComparer();
+                    break;
+
                 default:
                     throw new NotImplementedException();
             }
+
+            _searchPattern = serachPattern;
         }
 
         #endregion
@@ -39,7 +45,18 @@ namespace DuplicatesFinder
 
         public void FindDuplicates(string directoryOne, string directoryTwo)
         {
-            // should return a list of duplicates in a convenient format (e.g. paths to the same files in one record)
+            var filesFromDirectoryOne = GetAllFiles(directoryOne, _searchPattern);
+            var filesFromDirectoryTwo = GetAllFiles(directoryTwo, _searchPattern);
+
+            foreach (var fileOne in filesFromDirectoryOne)
+            {
+                foreach (var fileTwo in filesFromDirectoryTwo)
+                {
+                    var equal = _comparer.Equals(fileOne, fileTwo);
+                    if (equal)
+                        Console.WriteLine("[ {0}, {1} ]", fileOne, fileTwo);
+                }
+            }
         }
 
         #endregion
