@@ -36,7 +36,10 @@ namespace DuplicatesFinder
             FileInfo fileInfo;
 
             if (!_cache.TryGetValue(fileName, out fileInfo))
+            {
                 fileInfo = new FileInfo(fileName);
+                _cache.Add(fileName, fileInfo);
+            }
 
             return fileInfo;
         }
