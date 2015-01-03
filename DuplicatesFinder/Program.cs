@@ -19,12 +19,27 @@ namespace DuplicatesFinder
                 files[i] = Deserialize(serialized[i]);
             }*/
 
+            var cache = new Dictionary<string, FileInfo>();
+            var allFiles = Finder.GetAllFiles(@"D:\Фотографии");
+
+            int count = 0;
+
+            foreach (var file in allFiles)
+            {
+                cache.Add(file, new FileInfo(file));
+                count++;
+            }
+
+//            DoWork();
+        }
+
+        private static void DoWork()
+        {
             const string dirOne = @"D:\Фотографии";
             const string dirTwo = @"E:\Фотографии";
 
-            var finder = new Finder(ComparerType.Fast);
+            var finder = new Finder(ComparerType.Fast, true);
             finder.FindDuplicates(dirOne, dirTwo);
-
         }
 
         private static void Serialize(string path, string outputFileName)

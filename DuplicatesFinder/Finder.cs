@@ -11,12 +11,13 @@ namespace DuplicatesFinder
 
         private readonly IComparer _comparer;
         private readonly string _searchPattern;
+        private readonly bool _includeSubDirectories;
 
         #endregion
 
         #region Public Constructors
 
-        public Finder(ComparerType comparerType, string serachPattern = "*")
+        public Finder(ComparerType comparerType, bool includeSubDirectories, string searchPattern = "*")
         {
             switch (comparerType)
             {
@@ -36,7 +37,8 @@ namespace DuplicatesFinder
                     throw new NotImplementedException();
             }
 
-            _searchPattern = serachPattern;
+            _searchPattern = searchPattern;
+            _includeSubDirectories = includeSubDirectories;
         }
 
         #endregion
@@ -45,14 +47,14 @@ namespace DuplicatesFinder
 
         public void FindDuplicates(string directoryOne, string directoryTwo)
         {
-            var filesFromDirectoryOne = GetAllFiles(directoryOne, _searchPattern);
-            var filesFromDirectoryTwo = GetAllFiles(directoryTwo, _searchPattern);
+            var filesFromDirectoryOne = GetFiles(directoryOne);
+            var filesFromDirectoryTwo = GetFiles(directoryTwo);
 
             foreach (var fileOne in filesFromDirectoryOne)
             {
                 foreach (var fileTwo in filesFromDirectoryTwo)
                 {
-                    var equal = _comparer.Equals(fileOne, fileTwo);
+                    var equal = Compare(fileOne, fileTwo);
                     if (equal)
                         Console.WriteLine("[ {0}, {1} ]", fileOne, fileTwo);
                 }
@@ -64,6 +66,15 @@ namespace DuplicatesFinder
         private bool Compare(string fileName1, string fileName2)
         {
             return _comparer.Equals(fileName1, fileName2);
+        }
+
+        private List<string> GetFiles(string rootDirectory)
+        {
+            var searchOption = _includeSubDirectories ? SearchOption.AllDirectories : SearchOption.TopDirectoryOnly;
+            var directories = Directory.GetDirectories(rootDirectory, _searchPattern, searchOption).ToList();
+            directories.Add(rootDirectory);
+
+            return directories.SelectMany(Directory.GetFiles).ToList();
         }
 
         // temporary method used for serialization
