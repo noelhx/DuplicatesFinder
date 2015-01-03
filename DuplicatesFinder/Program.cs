@@ -10,44 +10,21 @@ namespace DuplicatesFinder
     {
         static void Main(string[] args)
         {
-            const string dPath = @"D:\Фотографии";
-            const string ePath = @"E:\Фотографии";
+            /*var serialized = new[] { @"..\..\DataDumps\dPhotos.txt", @"..\..\DataDumps\ePhotos.txt" };
 
-//            var paths = new[] { dPath, ePath };
-            var outputs = new[] { @"D:\dPhotos.txt", @"D:\ePhotos.txt" };
+            var files = new List<FileSizeInfo>[2];
 
-            foreach (var output in outputs)
+            for (int i = 0; i < serialized.Length; i++)
             {
-                var infos = Deserialize(output);
-            }
+                files[i] = Deserialize(serialized[i]);
+            }*/
 
-//            return;
+            const string dirOne = @"D:\Фотографии";
+            const string dirTwo = @"E:\Фотографии";
 
-            /*for (int i = 0; i < paths.Length; i++)
-            {
-                var path = paths[i];
-                var outputFileName = outputs[i];
+            var finder = new Finder(ComparerType.Fast);
+            finder.FindDuplicates(dirOne, dirTwo);
 
-                Serialize(path, outputFileName);
-            }
-
-            return;
-
-            var files = Finder.GetAllFiles(dPath);
-            var fileExtensions = files.Select(Path.GetExtension).Distinct().ToList();
-
-            var filesSizes = Finder.GetFilesSize(files);
-
-            var distFiles = filesSizes.GroupBy(a => new {a.ShortFileName, a.FileSize}).Select(a => a.First()).ToList();
-
-            var duplicates = filesSizes.Except(distFiles).ToList();
-
-            foreach (var info in duplicates)
-            {
-                Console.WriteLine(info.FileName);
-            }
-
-            Console.WriteLine("Files count: " + files.Count);*/
         }
 
         private static void Serialize(string path, string outputFileName)
