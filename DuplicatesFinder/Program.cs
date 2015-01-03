@@ -1,43 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Runtime.Serialization.Formatters.Binary;
 
 namespace DuplicatesFinder
 {
     class Program
     {
+        const string dirOne = @"D:\Фотографии";
+        const string dirTwo = @"E:\Фотографии";
+
         static void Main(string[] args)
         {
-            /*var serialized = new[] { @"..\..\DataDumps\dPhotos.txt", @"..\..\DataDumps\ePhotos.txt" };
+            var serialized = new[] { @"..\..\DataDumps\dPhotos.txt", @"..\..\DataDumps\ePhotos.txt" };
 
-            var files = new List<FileSizeInfo>[2];
-
-            for (int i = 0; i < serialized.Length; i++)
-            {
-                files[i] = Deserialize(serialized[i]);
-            }*/
-
-            var cache = new Dictionary<string, FileInfo>();
-            var allFiles = Finder.GetAllFiles(@"D:\Фотографии");
-
-            int count = 0;
-
-            foreach (var file in allFiles)
-            {
-                cache.Add(file, new FileInfo(file));
-                count++;
-            }
-
-//            DoWork();
+            var partOne = Deserialize(serialized[0]);
+            var partTwo = Deserialize(serialized[1]);
         }
 
         private static void DoWork()
         {
-            const string dirOne = @"D:\Фотографии";
-            const string dirTwo = @"E:\Фотографии";
-
             var finder = new Finder(ComparerType.Fast, true);
             finder.FindDuplicates(dirOne, dirTwo);
         }
