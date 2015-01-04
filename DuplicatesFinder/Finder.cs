@@ -114,7 +114,7 @@ namespace DuplicatesFinder
                 try
                 {
                     var fi = new FileInfo(file);
-                    var fsi = new FileSizeInfo(file, fi);
+                    var fsi = new FileSizeInfo(file, fi.Length);
                     result.Add(fsi);
                 }
                 catch (Exception e)

@@ -4,19 +4,41 @@ using System.IO;
 namespace DuplicatesFinder
 {
     /// <summary>
-    /// Helper class which is used for faster acces to a list of files with the FileInfo objects.
-    /// It is serializable.
+    /// Helper class which is used for faster access to a list of files with the sizes.
+    /// It is serializable class.
     /// </summary>
     [Serializable]
     public class FileSizeInfo
     {
-        private string _fileName;
-        private readonly FileInfo _fileInfo;
+        #region Private Fields
 
-        public FileSizeInfo(string fileName, FileInfo fileInfo)
+        private readonly string _fileName;
+        private readonly long _fileSize;
+
+        #endregion
+
+        #region Public Constructors
+
+        public FileSizeInfo(string fileName, long fileSize)
         {
             _fileName = fileName;
-            _fileInfo = fileInfo;
+            _fileSize = fileSize;
         }
+
+        #endregion
+
+        #region Public Properties
+
+        public string FileName
+        {
+            get { return _fileName; }
+        }
+
+        public long FileSize
+        {
+            get { return _fileSize; }
+        }
+
+        #endregion
     }
 }
