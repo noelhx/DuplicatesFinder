@@ -4,14 +4,21 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 namespace DuplicatesFinder
 {
-    class Program
+    public class Program
     {
-        const string dirOne = @"D:\Фотографии";
-        const string dirTwo = @"E:\Фотографии";
+        private const string dirOne = @"D:\Фотографии";
+        private const string dirTwo = @"E:\Фотографии";
+        private static bool _isMac = true;
 
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            var serialized = new[] { @"..\..\DataDumps\dPhotos.txt", @"..\..\DataDumps\ePhotos.txt" };
+            var serialized = new[] { @"..\..\DataDumps/dPhotos.txt", @"..\..\DataDumps\ePhotos.txt" };
+
+            if (_isMac)
+            {
+                for (int i = 0; i < serialized.Length; i++)
+                    serialized[i] = serialized[i].Replace('\\', '/');
+            }
 
             var partOne = Deserialize(serialized[0]);
             var partTwo = Deserialize(serialized[1]);
