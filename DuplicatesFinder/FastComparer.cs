@@ -13,11 +13,8 @@
 
         public bool Equals(string fileName1, string fileName2)
         {
-            var sizeCompareResult = _sizeComparer.Equals(fileName1, fileName2);
-            if (sizeCompareResult)
-                return true;
-
-            return _md5Comparer.Equals(fileName1, fileName2);
+            var equal = _sizeComparer.Equals(fileName1, fileName2);
+            return equal && _md5Comparer.Equals(fileName1, fileName2);
         }
 
         #endregion

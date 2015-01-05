@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using System.Linq;
 using System.Security.Cryptography;
 
 namespace DuplicatesFinder
@@ -10,7 +11,7 @@ namespace DuplicatesFinder
             var hash1 = ComputeHash(fileName1);
             var hash2 = ComputeHash(fileName2);
 
-            return hash1.Equals(hash2);
+            return hash1.SequenceEqual(hash2);
         }
 
         private byte[] ComputeHash(string fileName)
