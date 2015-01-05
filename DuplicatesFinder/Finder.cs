@@ -54,7 +54,7 @@ namespace DuplicatesFinder
             {
                 foreach (var fileTwo in filesFromDirectoryTwo)
                 {
-                    var equal = Compare(fileOne, fileTwo);
+                    var equal = _comparer.Equals(fileOne, fileTwo);
                     if (equal)
                         Console.WriteLine("[ {0}, {1} ]", fileOne, fileTwo);
                 }
@@ -62,12 +62,7 @@ namespace DuplicatesFinder
         }
 
         #endregion
-
-        private bool Compare(string fileName1, string fileName2)
-        {
-            return _comparer.Equals(fileName1, fileName2);
-        }
-
+        
         private List<string> GetFiles(string rootDirectory)
         {
             var searchOption = _includeSubDirectories ? SearchOption.AllDirectories : SearchOption.TopDirectoryOnly;
