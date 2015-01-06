@@ -52,6 +52,7 @@
     <Compile Include="Finder.cs" />
     <Compile Include="SizeComparer.cs" />
     <Compile Include="ByteComparer.cs" />
+    <Compile Include="Cache.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

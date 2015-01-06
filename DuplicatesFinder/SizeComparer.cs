@@ -7,7 +7,7 @@ namespace DuplicatesFinder
     {
         #region Private Fields
 
-        private Dictionary<string, FileInfo> _cache = new Dictionary<string, FileInfo>(); 
+        private Cache<string, long> _cache = new Cache<string, long>();
 
         #endregion
 
@@ -27,21 +27,7 @@ namespace DuplicatesFinder
 
         private long GetFileSize(string fileName)
         {
-            var fileInfo = GetOrInitFileInfo(fileName);
-            return fileInfo.Length;
-        }
-
-        private FileInfo GetOrInitFileInfo(string fileName)
-        {
-            FileInfo fileInfo;
-
-            if (!_cache.TryGetValue(fileName, out fileInfo))
-            {
-                fileInfo = new FileInfo(fileName);
-                _cache.Add(fileName, fileInfo);
-            }
-
-            return fileInfo;
+            return _cache.GetOrAdd(fileName, a => new FileInfo(fileName).Length);
         }
 
         #endregion
