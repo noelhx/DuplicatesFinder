@@ -7,8 +7,8 @@ namespace DuplicatesFinder
     {
         #region Private Fields
 
-        private Object _object = new Object();
-        private Dictionary<TKey, TValue> _cache = new Dictionary<TKey, TValue>();
+        private readonly Object _object = new Object();
+        private readonly Dictionary<TKey, TValue> _cache = new Dictionary<TKey, TValue>();
 
         #endregion
 
@@ -23,6 +23,7 @@ namespace DuplicatesFinder
                 if (!_cache.TryGetValue(key, out value))
                 {
                     value = valueFactory(key);
+                    _cache.Add(key, value);
                 }
             }
 
