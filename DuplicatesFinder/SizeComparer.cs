@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.IO;
+﻿using System.IO;
 
 namespace DuplicatesFinder
 {
@@ -7,7 +6,7 @@ namespace DuplicatesFinder
     {
         #region Private Fields
 
-        private Cache<string, long> _cache = new Cache<string, long>();
+        private readonly Cache<string, long> _cache = new Cache<string, long>();
 
         #endregion
 
