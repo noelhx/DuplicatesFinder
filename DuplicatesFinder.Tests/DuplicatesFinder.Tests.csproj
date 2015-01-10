@@ -49,7 +49,6 @@
   <ItemGroup>
     <Compile Include="CacheTests.cs" />
     <Compile Include="Program.cs" />
-    <Compile Include="Preparation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
