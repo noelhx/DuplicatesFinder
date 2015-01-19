@@ -43,7 +43,6 @@
   <ItemGroup>
     <Compile Include="ComparerType.cs" />
     <Compile Include="FastComparer.cs" />
-    <Compile Include="FileSizeInfo.cs" />
     <Compile Include="IComparer.cs" />
     <Compile Include="MD5Comparer.cs" />
     <Compile Include="Program.cs" />
