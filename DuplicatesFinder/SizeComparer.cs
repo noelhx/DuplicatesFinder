@@ -1,12 +1,10 @@
-﻿using System.IO;
-
-namespace DuplicatesFinder
+﻿namespace DuplicatesFinder
 {
     public class SizeComparer : IComparer
     {
         #region Private Fields
 
-        private readonly Cache<string, long> _cache = new Cache<string, long>();
+        private readonly FileInfoProxy _fileInfoProxy = new FileInfoProxy();
 
         #endregion
 
@@ -26,7 +24,7 @@ namespace DuplicatesFinder
 
         private long GetFileSize(string fileName)
         {
-            return _cache.GetOrAdd(fileName, a => new FileInfo(fileName).Length);
+            return _fileInfoProxy.Init(fileName).Length;
         }
 
         #endregion
