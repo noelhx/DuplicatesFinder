@@ -1,11 +1,11 @@
 ﻿namespace DuplicatesFinder
 {
-    public class FastComparer : IComparer
+    public class FastComparer : IFileComparer
     {
         #region Private Fields
 
-        private readonly IComparer _md5Comparer = new MD5Comparer();
-        private readonly IComparer _sizeComparer = new SizeComparer();
+        private readonly IFileComparer _md5Comparer = new MD5Comparer();
+        private readonly IFileComparer _sizeComparer = new SizeComparer();
 
         #endregion
 

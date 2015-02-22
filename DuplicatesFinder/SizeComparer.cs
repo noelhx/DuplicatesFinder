@@ -1,6 +1,6 @@
 ﻿namespace DuplicatesFinder
 {
-    public class SizeComparer : IComparer
+    public class SizeComparer : IFileComparer
     {
         #region Private Fields
 

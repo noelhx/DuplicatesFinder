@@ -1,6 +1,6 @@
 ﻿namespace DuplicatesFinder
 {
-    public interface IComparer
+    public interface IFileComparer
     {
         bool Equals(string fileName1, string fileName2);
     }

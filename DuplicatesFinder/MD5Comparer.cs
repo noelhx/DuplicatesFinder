@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace DuplicatesFinder
 {
-    public class MD5Comparer : IComparer
+    public class MD5Comparer : IFileComparer
     {
         private readonly MD5Proxy _md5Proxy = new MD5Proxy();
 

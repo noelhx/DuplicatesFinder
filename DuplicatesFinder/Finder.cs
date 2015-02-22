@@ -9,7 +9,7 @@ namespace DuplicatesFinder
     {
         #region Private Fields
 
-        private readonly IComparer _comparer;
+        private readonly IFileComparer _comparer;
         private readonly string _searchPattern;
         private readonly bool _includeSubDirectories;
 

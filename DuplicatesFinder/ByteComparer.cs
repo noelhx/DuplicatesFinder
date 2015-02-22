@@ -3,7 +3,7 @@ using System.IO;
 
 namespace DuplicatesFinder
 {
-    public class ByteComparer : IComparer
+    public class ByteComparer : IFileComparer
     {
         public bool Equals(string fileName1, string fileName2)
         {
