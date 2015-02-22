@@ -17,19 +17,19 @@ namespace DuplicatesFinder
 
         #region Public Constructors
 
-        public Finder(ComparerType comparerType, bool includeSubDirectories, string searchPattern = "*")
+        public Finder(FileCompareType fileCompareType, bool includeSubDirectories, string searchPattern = "*")
         {
-            switch (comparerType)
+            switch (fileCompareType)
             {
-                case ComparerType.MD5:
+                case FileCompareType.MD5:
                     _comparer = new MD5Comparer();
                     break;
 
-                case ComparerType.Size:
+                case FileCompareType.Size:
                     _comparer = new SizeComparer();
                     break;
 
-                case ComparerType.Fast:
+                case FileCompareType.Fast:
                     _comparer = new FastComparer();
                     break;
 

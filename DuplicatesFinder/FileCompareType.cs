@@ -1,6 +1,6 @@
 ﻿namespace DuplicatesFinder
 {
-    public enum ComparerType
+    public enum FileCompareType
     {
         MD5,
         Size,

@@ -41,7 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ComparerType.cs" />
+    <Compile Include="FileCompareType.cs" />
     <Compile Include="FastComparer.cs" />
     <Compile Include="FileInfoProxy.cs" />
     <Compile Include="IFileComparer.cs" />
