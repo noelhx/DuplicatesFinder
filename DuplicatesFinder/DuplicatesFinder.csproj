@@ -53,6 +53,7 @@
     <Compile Include="SizeComparer.cs" />
     <Compile Include="ByteComparer.cs" />
     <Compile Include="Cache.cs" />
+    <Compile Include="FileManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

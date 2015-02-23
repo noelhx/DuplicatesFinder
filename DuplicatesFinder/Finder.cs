@@ -47,8 +47,8 @@ namespace DuplicatesFinder
 
         public void FindDuplicates(string directoryOne, string directoryTwo)
         {
-            var filesFromDirectoryOne = GetFiles(directoryOne);
-            var filesFromDirectoryTwo = GetFiles(directoryTwo);
+            var filesFromDirectoryOne = FileManager.GetFiles(directoryOne, _includeSubDirectories, _searchPattern);
+            var filesFromDirectoryTwo = FileManager.GetFiles(directoryTwo, _includeSubDirectories, _searchPattern);
 
             foreach (var fileOne in filesFromDirectoryOne)
             {
@@ -59,19 +59,6 @@ namespace DuplicatesFinder
                         Console.WriteLine("[ {0}, {1} ]", fileOne, fileTwo);
                 }
             }
-        }
-
-        #endregion
-
-        #region Private Methods
-
-        private List<string> GetFiles(string rootDirectory)
-        {
-            var searchOption = _includeSubDirectories ? SearchOption.AllDirectories : SearchOption.TopDirectoryOnly;
-            var directories = Directory.GetDirectories(rootDirectory, _searchPattern, searchOption).ToList();
-            directories.Add(rootDirectory);
-
-            return directories.SelectMany(Directory.GetFiles).ToList();
         }
 
         #endregion
