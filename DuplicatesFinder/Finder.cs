@@ -19,24 +19,8 @@ namespace DuplicatesFinder
 
         public Finder(FileCompareType fileCompareType, bool includeSubDirectories, string searchPattern = "*")
         {
-            switch (fileCompareType)
-            {
-                case FileCompareType.MD5:
-                    _comparer = new MD5Comparer();
-                    break;
-
-                case FileCompareType.Size:
-                    _comparer = new SizeComparer();
-                    break;
-
-                case FileCompareType.Fast:
-                    _comparer = new FastComparer();
-                    break;
-
-                default:
-                    throw new NotImplementedException();
-            }
-
+            var factory = new FileComparerFactory();
+            _comparer = factory.Create(fileCompareType);
             _searchPattern = searchPattern;
             _includeSubDirectories = includeSubDirectories;
         }
