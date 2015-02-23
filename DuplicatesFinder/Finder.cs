@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 
 namespace DuplicatesFinder
 {
@@ -9,40 +6,30 @@ namespace DuplicatesFinder
     {
         #region Private Fields
 
-        private readonly IFileComparer _comparer;
-        private readonly string _searchPattern;
-        private readonly bool _includeSubDirectories;
+        private readonly Scanner _scanner;
 
         #endregion
 
         #region Public Constructors
 
-        public Finder(FileCompareType fileCompareType, bool includeSubDirectories, string searchPattern = "*")
+        public Finder(ScanType scanType, FileCompareType fileCompareType, bool includeSubDirectories, string searchPattern = "*")
         {
-            var factory = new FileComparerFactory();
-            _comparer = factory.Create(fileCompareType);
-            _searchPattern = searchPattern;
-            _includeSubDirectories = includeSubDirectories;
+            var scanOptions = new ScanOptions();
+            scanOptions.FileCompareType = fileCompareType;
+            scanOptions.IncludeSubDirectories = includeSubDirectories;
+            scanOptions.SearchPattern = searchPattern;
+
+            var scannerFactory = new ScannerFactory();
+            _scanner = scannerFactory.Create(scanType, scanOptions);
         }
 
         #endregion
 
         #region Public Methods
 
-        public void FindDuplicates(string directoryOne, string directoryTwo)
+        public void FindDuplicates(string directory1, string directory2)
         {
-            var filesFromDirectoryOne = FileManager.GetFiles(directoryOne, _includeSubDirectories, _searchPattern);
-            var filesFromDirectoryTwo = FileManager.GetFiles(directoryTwo, _includeSubDirectories, _searchPattern);
-
-            foreach (var fileOne in filesFromDirectoryOne)
-            {
-                foreach (var fileTwo in filesFromDirectoryTwo)
-                {
-                    var equal = _comparer.Equals(fileOne, fileTwo);
-                    if (equal)
-                        Console.WriteLine("[ {0}, {1} ]", fileOne, fileTwo);
-                }
-            }
+            _scanner.Scan(directory1, directory2);
         }
 
         #endregion

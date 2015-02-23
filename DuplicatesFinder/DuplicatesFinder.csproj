@@ -53,7 +53,14 @@
     <Compile Include="SizeComparer.cs" />
     <Compile Include="ByteComparer.cs" />
     <Compile Include="Cache.cs" />
+    <Compile Include="SmartScanner.cs" />
+    <Compile Include="SimpleScanner.cs" />
     <Compile Include="FileManager.cs" />
+    <Compile Include="ScanOptions.cs" />
+    <Compile Include="FileComparerFactory.cs" />
+    <Compile Include="Scanner.cs" />
+    <Compile Include="ScanType.cs" />
+    <Compile Include="ScannerFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

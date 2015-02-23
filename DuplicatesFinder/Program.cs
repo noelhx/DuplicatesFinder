@@ -11,7 +11,7 @@
 
         private static void DoWork()
         {
-            var finder = new Finder(ComparerType.Fast, true);
+            var finder = new Finder(ScanType.Simple, FileCompareType.Fast, true);
             finder.FindDuplicates(dirOne, dirTwo);
         }
     }
