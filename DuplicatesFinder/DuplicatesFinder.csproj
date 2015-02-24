@@ -61,6 +61,11 @@
     <Compile Include="Scanner.cs" />
     <Compile Include="ScanType.cs" />
     <Compile Include="ScannerFactory.cs" />
+    <Compile Include="IFolderComparer.cs" />
+    <Compile Include="FolderSizeComparer.cs" />
+    <Compile Include="FolderContentComparer.cs" />
+    <Compile Include="FolderComparerFactory.cs" />
+    <Compile Include="FolderCompareType.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
