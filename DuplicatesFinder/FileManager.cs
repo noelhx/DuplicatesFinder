@@ -33,6 +33,45 @@ namespace DuplicatesFinder
             return result;
         }
 
+        /// <summary>
+        /// Returns the size of the file.
+        /// </summary>
+        public static long GetFileSize(string fileName)
+        {
+            var fileInfo = new FileInfo(fileName);
+
+            return fileInfo.Length;
+        }
+
+        /// <summary>
+        /// Returns the size of the directory.
+        /// </summary>
+        public static long GetDirectorySize(string directory, bool includeSubDirectories, string searchPattern)
+        {
+            long size = 0;
+
+            var files = GetFiles(directory, includeSubDirectories, searchPattern);
+
+            foreach (var fileName in files)
+            {
+                size += GetFileSize(fileName);
+            }
+
+            return size;
+        }
+
+        /// <summary>
+        /// Returns the count of files in the directory.
+        /// </summary>
+        public static int GetDirectoryFilesCount(string directory, bool includeSubDirectories, string searchPattern)
+        {
+            return GetFiles(directory, includeSubDirectories, searchPattern).Count;
+        }
+
+        #endregion
+
+        #region Private Methods
+
         private static void GetScanFolders(string rootDirectory, List<string> result, string searchPattern)
         {
             var directories = Directory.GetDirectories(rootDirectory);
