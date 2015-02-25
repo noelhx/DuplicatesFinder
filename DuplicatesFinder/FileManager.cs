@@ -1,7 +1,6 @@
-﻿using System;
+﻿using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Collections.Generic;
 
 namespace DuplicatesFinder
 {
@@ -16,10 +15,15 @@ namespace DuplicatesFinder
         public static List<string> GetFiles(string rootDirectory, bool includeSubDirectories, string searchPattern)
         {
             var searchOption = includeSubDirectories ? SearchOption.AllDirectories : SearchOption.TopDirectoryOnly;
-            var directories = Directory.GetDirectories(rootDirectory, searchPattern, searchOption).ToList();
+            var directories = Directory.GetDirectories(rootDirectory, "*", searchOption).ToList();
             directories.Add(rootDirectory);
 
-            return directories.SelectMany(Directory.GetFiles).ToList();
+            var files = new List<string>();
+
+            foreach (var directory in directories)
+                files.AddRange(Directory.GetFiles(directory, searchPattern));
+
+            return files;
         }
 
         /// <summary>
