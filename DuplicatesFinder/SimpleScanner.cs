@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace DuplicatesFinder
+﻿namespace DuplicatesFinder
 {
     public class SimpleScanner : Scanner
     {
@@ -23,7 +21,7 @@ namespace DuplicatesFinder
             {
                 foreach (var fileTwo in files2)
                 {
-                    var equal = _comparer.Equals(fileOne, fileTwo);
+                    var equal = _fileComparer.Equals(fileOne, fileTwo);
                 }
             }
         }

@@ -5,17 +5,17 @@
         #region Private Fields
 
         protected ScanOptions _options;
-        protected IFileComparer _comparer;
+        protected IFileComparer _fileComparer;
 
         #endregion
 
         #region Constructors
 
-        public Scanner(ScanOptions scanOptions)
+        protected Scanner(ScanOptions scanOptions)
         {
             var fileComparerFactory = new FileComparerFactory();
             _options = scanOptions;
-            _comparer = fileComparerFactory.Create(scanOptions.FileCompareType);
+            _fileComparer = fileComparerFactory.Create(scanOptions.FileCompareType);
         }
 
         #endregion
