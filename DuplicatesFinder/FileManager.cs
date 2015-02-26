@@ -72,6 +72,14 @@ namespace DuplicatesFinder
             return GetFiles(directory, includeSubDirectories, searchPattern).Count;
         }
 
+        /// <summary>
+        /// Returns the short file name.
+        /// </summary>
+        public static string GetShortFileName(string fileName)
+        {
+            return Path.GetFileName(fileName);
+        }
+
         #endregion
 
         #region Private Methods
