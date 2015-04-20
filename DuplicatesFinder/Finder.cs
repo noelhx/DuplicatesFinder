@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace DuplicatesFinder
+﻿namespace DuplicatesFinder
 {
     public class Finder
     {
