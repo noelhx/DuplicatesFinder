@@ -21,7 +21,10 @@
             {
                 foreach (var fileTwo in files2)
                 {
-                    var equal = _fileComparer.Equals(fileOne, fileTwo);
+                    if (fileOne == fileTwo)
+                        continue;
+
+                    _fileComparer.Equals(fileOne, fileTwo);
                 }
             }
         }
