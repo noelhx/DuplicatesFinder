@@ -29,10 +29,10 @@ namespace DuplicatesFinder
         /// <summary>
         /// Returns the list of folders which contain files which match the search pattern.
         /// </summary>
-        public static List<string> GetScanFolders(string rootDirectory, string searchPattern)
+        public static List<string> GetDirectories(string rootDirectory, string searchPattern)
         {
             var result = new List<string>();
-            GetScanFolders(rootDirectory, result, searchPattern);
+            GetDirectories(rootDirectory, result, searchPattern);
 
             return result;
         }
@@ -84,7 +84,7 @@ namespace DuplicatesFinder
 
         #region Private Methods
 
-        private static void GetScanFolders(string rootDirectory, List<string> result, string searchPattern)
+        private static void GetDirectories(string rootDirectory, List<string> result, string searchPattern)
         {
             var directories = Directory.GetDirectories(rootDirectory);
             foreach (var directory in directories)
@@ -96,7 +96,7 @@ namespace DuplicatesFinder
                 }
                 else
                 {
-                    GetScanFolders(directory, result, searchPattern);
+                    GetDirectories(directory, result, searchPattern);
                 }
             }
         }
